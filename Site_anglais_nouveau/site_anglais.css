@@ -1,0 +1,99 @@
+body{
+    background-color: blue, blueviolet;
+    margin: 20px;
+}
+
+a{
+    display: inline-block;
+    width: 50px;
+    text-decoration: none;
+  }
+
+
+  section, .scroll-carte{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-animation-name: move;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: up;
+    -webkit-animation-timing-function: linear;
+  }
+
+ul{
+    list-style-type: none;
+}
+
+.scroll-carte{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 750px;
+    height: 400px;
+
+
+}
+
+.scroll-carte article{
+    width: 750px;
+    height: 400px;
+}
+
+.scroll-carte .Gaia{
+    background-image: url("Image/diamands_gaia.jpg");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: contain;
+
+}
+
+.scroll-carte .Atlas{
+    background-image: url("Image/baguepierre.jpg");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: contain;
+
+}
+
+.scroll-carte .Perseus{
+    background-image: url("Image/troisiemeimage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: contain;
+
+}
+
+
+
+.carte{
+    display: flex;
+}
+
+.carte article{
+    position: relative;
+    width: 750px;
+    height: 400px;
+}
+
+.carte img{
+    position: absolute;
+    opacity: 40%;
+    width: auto;
+    height: auto;
+
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+
+
