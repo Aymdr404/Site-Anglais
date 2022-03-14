@@ -4,10 +4,12 @@ body{
     background: rgba(1, 0, 0, 0.616);
 }
 
-ul{
-    list-style-type: none;
-}
 
+
+
+/*##################################*/
+/*#   Presentation cartes simple   #*/
+/*##################################*/
 .scrolling{
     display: flex;
     justify-content: center;
@@ -29,7 +31,6 @@ ul{
     position: relative;
     width: 500px;
     height: 700px;
-    background: blue;
     display: flex;
     justify-content: center;
     align-items:flex-end;
@@ -37,15 +38,17 @@ ul{
     box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     overflow: hidden;
     animation: slideout_cards 0.7s ;
+    border-radius: 10%;
 
 }
 
-.scroll-carte:hover .card{
+.scroll-carte:hover .card {
     opacity: 0.5;
 }
 
 .scroll-carte .card:hover{
     opacity: 1;
+    transform: scale(1.12);
     animation: slidein_cards 0.7s ;
     width: 600px;
     height: 750px;
@@ -82,7 +85,7 @@ ul{
 
 .scroll-carte .card:hover h2{
     opacity: 1;
-    transform: translateY(70px);  
+    transform: translateY(-70px);  
 }
 
 .scroll-carte .card .content h2{
@@ -124,10 +127,7 @@ ul{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-
 }
-
-
 
 .scroll-carte .card span{
     transition: 0.5;
@@ -144,7 +144,7 @@ ul{
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, transparent, #1779ff);
+    background: linear-gradient(to right, transparent, #a814a3);
     animation: animate1 2s linear infinite;
 }
 
@@ -154,7 +154,7 @@ ul{
     right: 0;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to bottom, transparent, #1779ff);
+    background: linear-gradient(to bottom, transparent, #a814a3);
     animation: animate2 2s linear infinite;
     animation-delay: 1s;
 }
@@ -166,7 +166,7 @@ ul{
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to left, transparent, #1779ff);
+    background: linear-gradient(to left, transparent, #a814a3);
     animation: animate3 2s linear infinite;
 }
 
@@ -176,35 +176,38 @@ ul{
     left: 0;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to top, transparent, #1779ff);
+    background: linear-gradient(to top, transparent, #a814a3);
     animation: animate4 2s linear infinite;
     animation-delay: 1s;
 }
 
 
 .scroll-carte .card:nth-child(1){
-    background-image: url("Image/troisiemeimage.jpg");
+    background-image: url("Image/crystral.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:cover;
+
 }
 
 .scroll-carte .card:nth-child(2){
-    background-image: url("Image/baguepierre.jpg");
+    background-image: url("Image/crystral2.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:cover;
 }
 
 .scroll-carte .card:nth-child(3){
-    background-image: url("Image/diamands_gaia.jpg");
+    background-image: url("Image/crystral3.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:cover;
+
 }
 
 
-.carDefinition_cartete{
-    display: flex;
-    justify-content: space-between;
-}
+
+/*##################################*/
+/*#   explication des cartes       #*/
+/*##################################*/
+
 
 .Definition_carte article{
     position: relative;
@@ -212,6 +215,20 @@ ul{
     height: 100%;
 }
 
+ul{
+    list-style-type: none;
+}
+
+
+.Definition_carte article li{
+    left: 50%;
+    color:aqua;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 8px 15px;
+}
 
 
 .Definition_carte img{
@@ -292,6 +309,24 @@ ul{
     to {
         width: 500px;
         height: 700px;
+    }
+  }
+  
+  
+  @-webkit-keyframes bg-pan-left {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes bg-pan-left {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
   
